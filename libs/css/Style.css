@@ -1,0 +1,110 @@
+/*General*/
+
+body {
+    color:#FFC107;
+    background-color: rgb(63, 61, 61);
+}
+
+/*Navbar*/
+
+a.navbar-brand {
+    color: #FFC107 !important;
+}
+
+/*Welcome Div*/
+
+#welcomeDiv {
+    height: 100%;
+    background-size: cover;
+}
+
+#welcomeForm{
+    border: 2px solid #212529;
+    background-color: white;
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    position: absolute;
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+#postcodeInput {
+    width: 50%;
+    margin-left:25%;
+    border: 1px solid #212529;
+
+}
+
+/*Table Div*/
+
+td {
+    vertical-align: top;
+}
+
+/*Button Div*/
+
+#buttonDiv {
+    text-align: center;
+}
+
+#compareBtn {
+    margin-right: 20px;
+}
+
+/*Modal*/
+
+.modal {
+    color:black;
+}
+
+/*preloader*/
+
+#preloader {  
+    position: fixed;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    z-index: 9999;  
+    overflow: hidden;  
+    background: rgb(63, 61, 61);
+}
+    
+#preloader:before {  
+    content: "";  
+    position: fixed;  
+    top: calc(50% - 30px);  
+    left: calc(50% - 30px);  
+    border: 6px solid #212529;  
+    border-top: 6px solid #FFC107 ;  
+    border-radius: 50%;  
+    width: 60px;  
+    height: 60px;  
+    -webkit-animation: animate-preloader 1s linear infinite;  
+    animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+    0% {   
+        -webkit-transform: rotate(0deg);    
+        transform: rotate(0deg);  
+    }  
+    100% {    
+        -webkit-transform: rotate(360deg);    
+        transform: rotate(360deg);  
+    }
+}
+
+@keyframes animate-preloader {  
+    0% {    
+        -webkit-transform: rotate(0deg);    
+        transform: rotate(0deg);  }  
+    
+    100% {    
+        -webkit-transform: rotate(360deg);    
+        transform: rotate(360deg);  
+    }
+}

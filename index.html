@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+   <head>
+
+      <meta charset="utf-8">
+      <title>Property Energy Performance</title>
+
+      <meta name = "viewport" content ="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Application To Retrieve Property Energy Performace and Compare With Nearby Adresses">
+      <meta name="author" content="James Brierley">
+      
+      <link href = "favicon.ico" rel="icon">
+      <link rel="stylesheet" href="./libs/css/bootstrap.min.css">
+      <link rel="stylesheet" href="./libs/css/Style.css">
+
+   </head>
+   <body>
+
+      <!--Navbar-->
+     
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="libs/images/home.png" id="logo">ome Energy Performance</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+         </div>
+      </nav>
+     
+      <!--Initial Message/Property Search Input and Button-->
+     
+      <div id ="welcomeDiv">
+         <form id = "welcomeForm">
+            <br/>
+            <h1>Want To Compare Your Home's Energy Performance?</h1>
+            <br/>
+            <h3>Let's Find Your Property! Enter Your Postcode Below:</h3>
+            <br/>
+            <input type="text" class="form-control" id="postcodeInput" required>
+            <small id="postcodeHelp" class="form-text text-muted">Enter the full postcode without any spaces. i.e. TW15 2RX = TW152RX</small><br/><br/>
+            <button type="button" class="btn btn-warning" id = "postcodeSearchBtn">Search By Postcode</button>
+         </form>
+      </div>
+
+      <!--Property Information Table-->
+      
+      <div id ="propertyInfoDiv">
+
+         <h1>Energy Performance Data</h1>
+
+         <table class = "table table-striped">
+            <thead class = "table-warning">
+               <tr style="font-weight: bold;">
+                  <td>
+                     Property Address
+                  </td>
+                  <td>
+                     Property Type
+                  </td>
+                  <td>
+                     Construction Period
+                  </td>
+                  <td>
+                     Current Energy rating
+                  </td>
+                  <td>
+                     Potential Energy Rating
+                  </td>
+                  <td>
+                     Environmental Impact Potential    
+                  </td>
+                  <td>
+                     CO<sub>2</sub> emissions current/potential
+                  </td>
+                  <td>
+                     Heating Energy Efficiency
+                  </td>
+                  <td>
+                     Window Energy Efficiency  
+                  </td>
+                  <td>
+                     Glazing
+                  </td>
+               </tr>
+            </thead>
+            <tbody class="table-primary" id = "yourPropertyTable">
+            </tbody>
+         </table>
+
+         <div id="buttonDiv">
+
+         <!--Add Comparison Data to Table-->
+
+          <button type="button" class="btn btn-warning" id = "compareBtn">Compare Results With Other Nearby Properties</button>
+          
+          <!--Refreshes Site-->
+          
+          <button onClick="window.location.reload();" class="btn btn-light">Home</button>
+         </div>
+      </div>
+      
+      <!--Property Select Modal-->
+      
+      <div class="modal fade" id="addressSelectModal" tabindex="-1" aria-labelledby="addressSelectModal" aria-hidden="true">
+         <div class="modal-dialog modal-md bg-light">
+            <div class="modal-content">
+               <form id="form-select-address" class="needs-validation" data-toggle="validator" role="form" novalidate>
+                  <div class="modal-header">
+                     <h5 class="modal-title" id="addressSelectModalLabel">Select Address</h5>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body bg-light">
+                     <div class="form-group">
+                        <label for="chooseAddressSelect">Select Address:</label> <br/>
+                        <select id="chooseAddressSelect" class="form-select" name="Select Address">
+                        </select>
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <button id="btn-property-select-cancel" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      
+      <div id = "preloader"></div>
+      
+      <script src="./libs/js/jquery-3.5.1.js"></script>
+      <script src="./libs/js/bootstrap.bundle.min.js"></script>
+      <script src="./libs/js/script.js"></script>
+   
+    </body>
+</html>
